@@ -8,10 +8,16 @@
     color: #ed4d6e;
     transition: .3s linear;
     outline: none;
-
+    appearance: none;
+    text-align: center;
 }
 
 .dropdown:hover{
     background-color: mediumslateblue;
     color: white;
 }
+
+.drop-container{
+    margin-bottom: 15px;
+}
+

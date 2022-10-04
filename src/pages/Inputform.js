@@ -2,7 +2,7 @@ export default function Home() {
   return (
     <>
       <h1 className="title">
-        Add A <span className="new">New </span>Place
+        Add a <span className="new">NEW</span> Place
       </h1>
       <div class="form-container">
         <form>

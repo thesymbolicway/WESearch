@@ -52,4 +52,7 @@ input::placeholder {
   color: mediumslateblue;
   padding-left: 7px;
   padding-right: 7px;
+  text-decoration: underline;
+  text-decoration-color: #ed4d6e;
+  text-decoration-thickness: 5px;
 }
