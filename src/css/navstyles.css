@@ -1,66 +1,66 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
+  margin: 0;
 }
 
 .all-pages {
-    text-align: center;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 .nav {
-    border-style: solid;
-    border-color: #ed4d6e;
-    border-width: 0px 5px 5px 5px;
-    border-radius: 5px;
-    background-color:mediumslateblue;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2rem;
-    padding: 0 1rem;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  border-style: solid;
+  border-color: #ed4d6e;
+  border-width: 0px 5px 5px 5px;
+  border-radius: 5px;
+  background-color: mediumslateblue;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 0 1rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-.nav ul{
-    padding: 25px;
-    margin: 0;
-    list-style: none;
-    display: flex;
-    gap: 1rem;
+.nav ul {
+  padding: 25px;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
 }
 
 .nav a {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
-.wesearch{
-    font-size: 2rem;
-} 
+.wesearch {
+  font-size: 2rem;
+}
 .wesearch span {
-    color: #ED4D6E;
-    font-weight: bold;
-    font-size: larger;
+  color: #ed4d6e;
+  font-weight: bold;
+  font-size: larger;
 }
 .nav li.active {
-    background-color: #ED4D6E;
-    padding: 5px;
-    border-radius: 10px;
+  background-color: #ed4d6e;
+  padding: 5px;
+  border-radius: 10px;
 }
 
 .nav li:hover {
-    background-color: #ED4D6E;
-    text-shadow: #81F7E5;
-    padding: 5px;
-    transition-duration: .5s;
-    border-radius: 10px;
+  background-color: #ed4d6e;
+  text-shadow: #81f7e5;
+  padding: 5px;
+  transition-duration: 0.5s;
+  border-radius: 10px;
 }
 
 .title {
-    color: #ED4D6E;
+  color: #ed4d6e;
 }

@@ -10,5 +10,5 @@ export default function Reviews() {
         <option value="venue">Venue</option>
       </select>
     </>
-  );
+  )
 }
