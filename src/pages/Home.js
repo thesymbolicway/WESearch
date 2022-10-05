@@ -7,7 +7,6 @@ export default function Home() {
             wesearch.
           </h1>
         </div>
-        {/* <div className="home-img"></div> */}
       </div>
     </>
   )
