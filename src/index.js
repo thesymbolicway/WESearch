@@ -4,6 +4,7 @@ import App from './App';
 import "./css/navstyles.css";
 import "./css/home.css";
 import "./css/input.css";
+import "./css/cards.css";
 import "./css/reviews.css";
 import { BrowserRouter } from "react-router-dom"
 
