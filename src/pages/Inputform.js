@@ -1,5 +1,5 @@
 import { useState } from "react";
-export default function Home() {
+export default function Home({ places }) {
   const [ name, setName ] = useState("");
   const [ category, setCategory ] = useState("");
   const [ price, setPrice ] = useState("");
