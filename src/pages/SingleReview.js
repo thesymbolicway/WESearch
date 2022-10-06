@@ -1,29 +1,54 @@
  import { useState } from 'react'
  
  function SingleReview({review}){
- const [rating, setRating] = useState(review.star_rating); 
+//  const [rating, setRating] = useState(""); 
 
- if (rating === 1){
-    return "⭐"
- }
- else if (rating === 2){
-    return "⭐⭐"
- }
-else if (rating === 3){
-   return "⭐⭐⭐"
-}
-else if (rating === 4){
-   return "⭐⭐⭐⭐"
-}
-else if (rating === 5){
-   return "⭐⭐⭐⭐⭐"
-}
-    
+ if (review.star_rating === 1){
     return (
         <>
             <p>"{review.review}" - <span className="span-tag">{review.user.name}</span> </p>
-            
-            <p>Stars: <span className="span-tag">{setRating}</span></p>
+            <p>Stars: <span className="span-tag">⭐</span></p>
+        </>
+    )
+ }
+ else if (review.star_rating === 2){
+    return (
+        <>
+            <p>"{review.review}" - <span className="span-tag">{review.user.name}</span> </p>
+            <p>Stars: <span className="span-tag">⭐⭐</span></p>
+        </>
+    )
+ }
+ else if (review.star_rating === 3){
+    return (
+        <>
+            <p>"{review.review}" - <span className="span-tag">{review.user.name}</span> </p>
+            <p>Stars: <span className="span-tag">⭐⭐⭐</span></p>
+        </>
+    )
+}
+else if (review.star_rating === 4){
+    return (
+        <>
+            <p>"{review.review}" - <span className="span-tag">{review.user.name}</span> </p>
+            <p>Stars: <span className="span-tag">⭐⭐⭐⭐</span></p>
+        </>
+    )
+    }
+else if (review.star_rating === 5){
+    return (
+        <>
+            <p>"{review.review}" - <span className="span-tag">{review.user.name}</span> </p>
+            <p>Stars: <span className="span-tag">⭐⭐⭐⭐⭐</span></p>
+        </>
+    )
+}
+
+    
+   return (
+        <>
+            <p>"{review.review}" - <span className="span-tag">{review.user.name}</span> </p>
+            <p>Stars: <span className="span-tag">{review.star_rating}</span></p>
         </>
     )
 }
