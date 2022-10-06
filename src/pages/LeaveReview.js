@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
+import PlacesPopup from './PlacesPopup';
 
 export default function LeaveReview() {
   const [user_id, setName] = useState('')
@@ -7,30 +8,30 @@ export default function LeaveReview() {
   const [star_rating, setStar_rating] = useState('')
   const [name, setUserName] = useState('')
   const [users, setUsers] = useState('')
+  const [buttonPopup, setButtonPopup] = useState(false)
 
-//fetching all users
+  //fetching all users
   useEffect(() => {
     fetch('http://localhost:9292/users')
       .then((res) => res.json())
       .then((data) => setUsers(data))
   }, [users])
 
-//setting variable to the new user
+  //setting variable to the new user
   const userId = users.length + 1
 
   //creates a new user
-    function handleSubmitUser(e) {
-      e.preventDefault()
-      const user = { name }
-      fetch('http://localhost:9292/users', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(user),
-      })
-      .then(setUserName(''));
-    }
+  function handleSubmitUser(e) {
+    e.preventDefault()
+    const user = { name }
+    fetch('http://localhost:9292/users', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(user),
+    }).then(setUserName(''))
+  }
 
-//submits a new review
+  //submits a new review
   function handleSubmit(e) {
     e.preventDefault()
     const newReview = { user_id, review, place_id, star_rating }
@@ -41,7 +42,7 @@ export default function LeaveReview() {
     }).then(setName(''), setPlace(''), setReview(''), setStar_rating(''))
   }
 
-//setting state to button to change its text after 2 second
+  //setting state to button to change its text after 2 second
   const text = 'Submit'
   const [buttonText, setButtonText] = useState(text)
 
@@ -104,7 +105,14 @@ export default function LeaveReview() {
           >
             {buttonText}
           </button>
+          <button
+            className="submit-button"
+            onClick={() => setButtonPopup(true)}
+          >
+            See List Of Places' IDs
+          </button>
         </form>
+        <PlacesPopup setTrigger={setButtonPopup} trigger={buttonPopup} />
       </div>
     </>
   )

@@ -1,3 +1,4 @@
+import React from "react";
 import Navbar from "./Navbar";
 import About from "./pages/About";
 import Inputform from "./pages/Inputform";
@@ -5,6 +6,7 @@ import Reviews from "./pages/Reviews";
 import Home from "./pages/Home";
 import LeaveReview from "./pages/LeaveReview";
 import { Route, Routes } from "react-router-dom";
+import "./css/App.css";
 
 
 function App() {
