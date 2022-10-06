@@ -9,7 +9,7 @@ function PlaceCard({ place, handleDelete }) {
   return (
     <div className="card" key={newPlace.id} id={newPlace.id}>
       <p className="card-name">{newPlace.name}</p>
-      <p className="card-category">
+      <p className="card-category"> 
         <span>{newPlace.category}</span>
       </p>
       <div className="card-image-container">

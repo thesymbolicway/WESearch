@@ -4,12 +4,14 @@ import { useState, useEffect } from 'react'
 export default function Reviews() {
   const [places, setPlaces] = useState([])
 
+  //grabbing all of our places
   useEffect(() => {
     fetch('http://localhost:9292/places')
       .then((res) => res.json())
       .then((data) => setPlaces(data))
   }, [])
 
+  //sending delete request with said instance
   const handleDelete = (id) => {
     fetch(`http://localhost:9292/places/${id}`, {
       method: 'DELETE',
@@ -18,7 +20,8 @@ export default function Reviews() {
       .then(setPlaces(places.filter((place) => place.id !== id)))
   }
 
-  const [reviews, setReviews] = useState([]);
+  //getting all reviews
+  const [reviews, setReviews] = useState([])
 
   useEffect(() => {
     fetch('http://localhost:9292/reviews')
@@ -26,12 +29,16 @@ export default function Reviews() {
       .then((data) => setReviews(data))
   }, [])
 
-  const [ searchTerm, setSearchTerm ] = useState("")
+  //creating a search function for our list of places
+  const [searchTerm, setSearchTerm] = useState('')
 
-  const placesToDisplay = places.filter((place) => ((place.name + place.category + place.location).toLowerCase().includes(searchTerm.toLowerCase())))
+  const placesToDisplay = places.filter((place) =>
+    (place.name + place.category + place.location)
+      .toLowerCase()
+      .includes(searchTerm.toLowerCase()),
+  )
 
-
-  function handleChange(event){
+  function handleChange(event) {
     setSearchTerm(event.target.value)
   }
 
@@ -47,7 +54,13 @@ export default function Reviews() {
           <option value="Venues">Venue</option>
         </select>
       </div>
-      <input type="text" className="search-Btn" placeholder="Search..." value={searchTerm} onChange={handleChange}></input>
+      <input
+        type="text"
+        className="search-Btn"
+        placeholder="Search..."
+        value={searchTerm}
+        onChange={handleChange}
+      ></input>
       <div className="review-container">
         <div className="cards">
           {placesToDisplay.map((place) => {
