@@ -1,5 +1,6 @@
 import PlaceCard from './PlaceCard'
 import { useState, useEffect } from 'react'
+import { motion, AnimatePresence } from "framer-motion"
 
 export default function Reviews() {
   const [places, setPlaces] = useState([])
@@ -41,12 +42,24 @@ export default function Reviews() {
   function handleChange(event) {
     setSearchTerm(event.target.value)
   }
+  const [selectedCategory, setSelectedCategory] = useState("places")
+
+  const handleSelectedCategory = (e) => {
+    setSelectedCategory(e.target.value)
+  }
+  
+  let filteredPlaces = placesToDisplay.filter(placeObj => {
+    if (selectedCategory === "places") return true;
+  
+    return (placeObj.category === selectedCategory)
+  })
+
 
   return (
     <>
       <h1 className="title">Reviews</h1>
       <div className="drop-container">
-        <select className="dropdown" name="places" id="places">
+        <select className="dropdown"  onChange={handleSelectedCategory}>
           <option value="places">ALL</option>
           <option value="Restaurants">Restaurant</option>
           <option value="Auto">Auto</option>
@@ -62,8 +75,9 @@ export default function Reviews() {
         onChange={handleChange}
       ></input>
       <div className="review-container">
-        <div className="cards">
-          {placesToDisplay.map((place) => {
+        <motion.div layout className="cards">
+          <AnimatePresence>
+          {filteredPlaces.map((place) => {
             return (
               <PlaceCard
                 key={place.id}
@@ -75,7 +89,8 @@ export default function Reviews() {
               />
             )
           })}
-        </div>
+        </AnimatePresence>
+        </motion.div>
       </div>
     </>
   )

@@ -1,4 +1,5 @@
 import { Link, useMatch, useResolvedPath } from "react-router-dom"
+import DarkMode from "./DarkMode";
 export default function Navbar(){
     return <nav className="nav">
         <Link to="/" className="wesearch"><span>we</span>search.</Link>
@@ -8,6 +9,7 @@ export default function Navbar(){
             <CustomLink to="/add">Add New Place</CustomLink>
             <CustomLink to="/addreview">Leave a Review</CustomLink>
         </ul>
+        <DarkMode />
     </nav>
 }
 
