@@ -6,6 +6,7 @@ export default function Home({ places }) {
   const [location, setLocation] = useState('')
   const [image_url, setImage_url] = useState('')
 
+  //post request to submit a new place
   function handleSubmit(e) {
     e.preventDefault()
     const place = { name, category, price, location, image_url }
@@ -13,18 +14,25 @@ export default function Home({ places }) {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(place),
-    })
-    .then(setName(''), setCategory(''), setPrice(''), setLocation(''), setImage_url(''))
+    }).then(
+      setName(''),
+      setCategory(''),
+      setPrice(''),
+      setLocation(''),
+      setImage_url(''),
+    )
   }
-  const text = "Submit"
+
+  //setting timer to change text of button
+  const text = 'Submit'
   const [buttonText, setButtonText] = useState(text)
 
-  useEffect(()=> {
-    const timer = setTimeout(()=> {
-       setButtonText(text);
-    }, 1000);
-    return ()=> clearTimeout(timer);
- }, [buttonText])
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setButtonText(text)
+    }, 1000)
+    return () => clearTimeout(timer)
+  }, [buttonText])
 
   return (
     <>
@@ -73,7 +81,11 @@ export default function Home({ places }) {
             value={image_url}
             onChange={(e) => setImage_url(e.target.value)}
           />
-          <button className="submit-button" type="submit" onClick={() => setButtonText("Submitted!")}>
+          <button
+            className="submit-button"
+            type="submit"
+            onClick={() => setButtonText('Submitted!')}
+          >
             {buttonText}
           </button>
         </form>

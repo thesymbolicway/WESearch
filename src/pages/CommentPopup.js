@@ -8,6 +8,7 @@ export default function CommentPopup(props) {
   const [location, setLocation] = useState(props.newPlace.location)
   const [image_url, setImage_url] = useState(props.newPlace.image_url)
 
+  //patch request to update what we dont like and keep what we do
   function handleSubmit(e) {
     e.preventDefault();
     const updatedPlace = { name, category, price, location, image_url };
