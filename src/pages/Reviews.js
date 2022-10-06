@@ -1,5 +1,6 @@
 import PlaceCard from './PlaceCard'
 import { useState, useEffect } from 'react'
+import { motion, AnimatePresence } from "framer-motion"
 
 export default function Reviews() {
   const [places, setPlaces] = useState([])
@@ -74,7 +75,8 @@ export default function Reviews() {
         onChange={handleChange}
       ></input>
       <div className="review-container">
-        <div className="cards">
+        <motion.div layout className="cards">
+          <AnimatePresence>
           {filteredPlaces.map((place) => {
             return (
               <PlaceCard
@@ -87,7 +89,8 @@ export default function Reviews() {
               />
             )
           })}
-        </div>
+        </AnimatePresence>
+        </motion.div>
       </div>
     </>
   )

@@ -1,13 +1,18 @@
 import { useState } from 'react'
 import SingleReview from './SingleReview'
 import CommentPopup from './CommentPopup'
+import { motion } from "framer-motion"
 
 function PlaceCard({ place, handleDelete }) {
   const [buttonPopup, setButtonPopup] = useState(false)
   const [newPlace, setNewPlace] = useState(place)
 
   return (
-    <div className="card" key={newPlace.id} id={newPlace.id}>
+    <motion.div layout 
+    animate={{opacity: 1}} 
+    initial={{opacity: 0}} 
+    exit={{opacity: 0}}
+    className="card" key={newPlace.id} id={newPlace.id}>
       <p className="card-name">{newPlace.name}</p>
       <p className="card-category"> 
         <span>{newPlace.category}</span>
@@ -49,7 +54,7 @@ function PlaceCard({ place, handleDelete }) {
           setNewPlace={setNewPlace}
         />
       </div>
-    </div>
+    </motion.div>
   )
 }
 
