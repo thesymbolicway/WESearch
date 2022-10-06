@@ -18,13 +18,22 @@ export default function Reviews() {
       .then(setPlaces(places.filter((place) => place.id !== id)))
   }
 
-  const [reviews, setReviews] = useState([])
+  const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
     fetch('http://localhost:9292/reviews')
       .then((res) => res.json())
       .then((data) => setReviews(data))
   }, [])
+
+  const [ searchTerm, setSearchTerm ] = useState("")
+
+  const placesToDisplay = places.filter((place) => ((place.name + place.category + place.location).toLowerCase().includes(searchTerm.toLowerCase())))
+
+
+  function handleChange(event){
+    setSearchTerm(event.target.value)
+  }
 
   return (
     <>
@@ -38,10 +47,10 @@ export default function Reviews() {
           <option value="Venues">Venue</option>
         </select>
       </div>
-      <input type="text" className="search-Btn" placeholder="Search.."></input>
+      <input type="text" className="search-Btn" placeholder="Search..." value={searchTerm} onChange={handleChange}></input>
       <div className="review-container">
         <div className="cards">
-          {places.map((place) => {
+          {placesToDisplay.map((place) => {
             return (
               <PlaceCard
                 key={place.id}
