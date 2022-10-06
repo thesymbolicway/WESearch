@@ -6,7 +6,10 @@ import "./css/home.css";
 import "./css/input.css";
 import "./css/cards.css";
 import "./css/reviews.css";
+import "./css/DarkMode.css";
 import { BrowserRouter } from "react-router-dom"
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
