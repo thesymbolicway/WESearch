@@ -41,12 +41,24 @@ export default function Reviews() {
   function handleChange(event) {
     setSearchTerm(event.target.value)
   }
+  const [selectedCategory, setSelectedCategory] = useState("places")
+
+  const handleSelectedCategory = (e) => {
+    setSelectedCategory(e.target.value)
+  }
+  
+  let filteredPlaces = placesToDisplay.filter(placeObj => {
+    if (selectedCategory === "places") return true;
+  
+    return (placeObj.category === selectedCategory)
+  })
+
 
   return (
     <>
       <h1 className="title">Reviews</h1>
       <div className="drop-container">
-        <select className="dropdown" name="places" id="places">
+        <select className="dropdown"  onChange={handleSelectedCategory}>
           <option value="places">ALL</option>
           <option value="Restaurants">Restaurant</option>
           <option value="Auto">Auto</option>
@@ -63,7 +75,7 @@ export default function Reviews() {
       ></input>
       <div className="review-container">
         <div className="cards">
-          {placesToDisplay.map((place) => {
+          {filteredPlaces.map((place) => {
             return (
               <PlaceCard
                 key={place.id}
