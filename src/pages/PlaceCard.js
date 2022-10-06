@@ -1,35 +1,56 @@
-// import { useState, useEffect } from 'react';
-import SingleReview from "./SingleReview";
+import { useState } from 'react'
+import SingleReview from './SingleReview'
+import CommentPopup from './CommentPopup'
 
-function PlaceCard({place, handleDelete, reviews}) {
+function PlaceCard({ place, handleDelete }) {
+  const [buttonPopup, setButtonPopup] = useState(false)
+  const [newPlace, setNewPlace] = useState(place)
 
-  // const [ reviews, setReviews ] = useState([])
-
-  // useEffect(() => {
-  //   fetch('http://localhost:9292/reviews')
-  //   .then(res => res.json())
-  //   .then(data => console.log(data))
-  // }, []);
-  // console.log(reviews)
-  //   const matchedReview = reviews.find((review)=>review.place_id === place.id)
-  //   console.log(matchedReview)
-    
   return (
-    <div className="card" id={place.id}>
-      <p className="card-name">{place.name}</p>
-      <p className="card-category"><span>{place.category}</span></p>
+    <div className="card" key={newPlace.id} id={newPlace.id}>
+      <p className="card-name">{newPlace.name}</p>
+      <p className="card-category">
+        <span>{newPlace.category}</span>
+      </p>
       <div className="card-image-container">
-        <img className="card-image" src={place.image_url} alt={place.name} />
+        <img className="card-image" src={newPlace.image_url} alt={newPlace.name} />
       </div>
       <div className="details">
-        <p>Average Price Per Guest: <span>{place.price}$</span></p>
-        <p> Address: <span>{place.location}</span></p>
-        {place.reviews.length ? (<p>Reviews: {place.reviews.map((review) => <SingleReview review={review}/>)}</p>) : (<p>No reviews yet!</p>)}
-        <button className="emoji-button delete" onClick={() => handleDelete(place.id)}>🗑</button>
-        <button className="submit-button">Leave A Review</button>
+        <p>
+          Average Price Per Guest: <span>${newPlace.price}</span>
+        </p>
+        <p>
+          {' '}
+          Address: <span>{newPlace.location}</span>
+        </p>
+        {place.reviews.length ? (
+          <p>
+            <span>Reviews:</span>
+            {place.reviews.map((review) => (
+              <SingleReview key={review.id} review={review} />
+            ))}
+          </p>
+        ) : (
+          <p>No reviews yet!</p>
+        )}
+        <button
+          className="emoji-button-delete"
+          onClick={() => handleDelete(newPlace.id)}
+        >
+          🗑
+        </button>
+        <button className="submit-button" onClick={() => setButtonPopup(true)}>
+          Edit Place
+        </button>
+        <CommentPopup
+          newPlace={newPlace}
+          trigger={buttonPopup}
+          setTrigger={setButtonPopup}
+          setNewPlace={setNewPlace}
+        />
       </div>
     </div>
-  );
+  )
 }
 
-export default PlaceCard;
+export default PlaceCard
