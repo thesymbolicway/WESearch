@@ -1,14 +1,14 @@
- import { useState } from 'react'
+//  import { useState } from 'react'
  
  function SingleReview({review}){
 //  const [rating, setRating] = useState(""); 
 
  if (review.star_rating === 1){
     return (
-        <>
+        <div className="">
             <p>"{review.review}" - <span className="span-tag">{review.user.name}</span> </p>
             <p>Stars: <span className="span-tag">⭐</span></p>
-        </>
+        </div>
     )
  }
  else if (review.star_rating === 2){

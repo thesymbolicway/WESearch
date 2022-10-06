@@ -63,7 +63,7 @@ h1 {
 }
 
 p {
-  width: 40%;
+  /* width: 40%; */
   margin: 1rem auto;
   line-height: 1.6;
 }

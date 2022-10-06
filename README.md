@@ -1,70 +1,81 @@
-# Getting Started with Create React App
+![screenshot](https://danielarisa.com/wp-content/uploads/2022/10/ezgif.com-gif-maker.gif)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Authors
 
-In the project directory, you can run:
+- [@JeremeyHansen](https://github.com/JeremeyHansen)
+- [@thesymbolicway](https://github.com/thesymbolicway)
+- [@planeJayne](https://github.com/planeJayne)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Key Features
+* Dark/Light mode
+* Dynamic Filter Animation 
+* Emoji support in preview
+* Full screen mode
+* Cross platform
+  - Windows, macOS and Linux ready.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## How To Use
+WeSearch is a Fullstack application meaning that to operate the frontend you must deploy the backend as detailed here [WeSearch Backend ReadMe](http://example.com/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
+```bash
+# Clone this repository
+$ git clone https://github.com/JeremeyHansen/front-end-project-3
 
-### `npm run build`
+# Go into the repository
+$ cd WeSearch
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Install dependencies
+$ npm install
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Run the app
+$ npm start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Emailware
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+WeSearch is an [emailware](https://en.wiktionary.org/wiki/emailware). Meaning, if you liked using this app or it has helped you in any way, I'd like you send me an email at <daniel.arisa@yahoo.com> or <jeremeyhansen@yahoo.com> about anything you'd want to say about this project. I'd really appreciate it!
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Credits
 
-## Learn More
+This software uses the following open source packages:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- [Ruby](https://rubygems.org/)
+- [Node.js](https://nodejs.org/)
+- [Framer Motion](https://www.framer.com/motion/)
+- [highlight.js](https://highlightjs.org/)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## Support
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Reach out to me or @JeremeyHansen if you have any suggestions. Create a branch and work on this project yourself. We are always open to ideas!
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## License
 
-### Making a Progressive Web App
+MIT
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+> [danielarisa.com](https://danielarisa.com) &nbsp;&middot;&nbsp;
+> GitHub [@JeremeyHansen](https://github.com/JeremeyHansen) &nbsp;&middot;&nbsp; [@thesymbolicway](https://github.com/thesymbolicway)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Contributing
+
+Contributions are always welcome!
+
+See `contributing.md` for ways to get started.
+
+Please adhere to this project's `code of conduct`.
+

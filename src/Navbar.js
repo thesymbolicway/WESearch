@@ -8,8 +8,8 @@ export default function Navbar(){
             <CustomLink to="/reviews">Reviews</CustomLink>
             <CustomLink to="/add">Add New Place</CustomLink>
             <CustomLink to="/addreview">Leave a Review</CustomLink>
-        </ul>
         <DarkMode />
+        </ul>
     </nav>
 }
 

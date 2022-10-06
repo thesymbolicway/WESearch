@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  align-items: stretch;
+  /* align-items: stretch; */
   justify-content: space-between;
   justify-content: space-around;
 }
@@ -16,8 +16,9 @@
   border-radius: 20px;
   margin-bottom: 25px;
   list-style-type: none;
-  width: 300px;
+  width: 400px;
   color: #ff7d97;
+  margin-left: 30px;
   background-color: rgb(123, 104, 238);
   box-shadow: 0px 0px 10px #ff7d97, 0px 0px 20px #ff7d97;
 }
