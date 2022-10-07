@@ -18,7 +18,7 @@
 
 
 ## How To Use
-WeSearch is a Fullstack application meaning that to operate the frontend you must deploy the backend as detailed here [WeSearch Backend ReadMe](http://example.com/)
+WeSearch is a Fullstack application meaning that to operate the frontend you must deploy the backend as detailed here [WeSearch Backend ReadMe](https://github.com/thesymbolicway/phase-3-we-search-backend)
 
 To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
 ```bash
